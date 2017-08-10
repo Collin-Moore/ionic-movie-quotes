@@ -60,4 +60,8 @@ export class ListPage {
     prompt.present();
   }
 
+  removeQuote(quoteToDeleteKey: string): void {
+    this.movieQuoteStream.remove(quoteToDeleteKey);
+  }
+
 }
