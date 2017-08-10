@@ -30,6 +30,7 @@ export const firebaseConfig = {
     QuoteDetailPageModule,
     ListPageModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
