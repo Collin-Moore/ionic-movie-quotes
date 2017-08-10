@@ -8,6 +8,18 @@ import { MyApp } from './app.component';
 import { QuoteDetailPageModule } from "../pages/quote-detail/quote-detail.module";
 import { ListPageModule } from "../pages/list/list.module";
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyD2MjoFTzMfCU3eG_XTsL246rN-Gzg3m8I",
+  authDomain: "moorect-movie-quotes.firebaseapp.com",
+  databaseURL: "https://moorect-movie-quotes.firebaseio.com",
+  projectId: "moorect-movie-quotes",
+  storageBucket: "moorect-movie-quotes.appspot.com",
+  messagingSenderId: "229844026706"
+}
+
 @NgModule({
   declarations: [
     MyApp,
@@ -17,6 +29,7 @@ import { ListPageModule } from "../pages/list/list.module";
     IonicModule.forRoot(MyApp),
     QuoteDetailPageModule,
     ListPageModule,
+    AngularFireModule.initializeApp(firebaseConfig),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
