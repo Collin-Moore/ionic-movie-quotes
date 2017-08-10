@@ -1,18 +1,19 @@
-<!--
-  Generated template for the QuoteDetailPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
     <ion-title>Quote</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="editQuote()">
+        <ion-icon name="ios-create-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
-
-<ion-content padding>
-This is the QuoteDetailPage
+<ion-content id="detail-view" padding>
+  <ion-card>
+    <ion-card-content>
+      <h2>{{movieQuote?.quote}}</h2>
+      <p id="movie-title">{{movieQuote?.movie}}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
